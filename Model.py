@@ -3,9 +3,9 @@ from sklearn import svm, metrics
 from sklearn.metrics import confusion_matrix
 class Model:
     def __init__(self,dataHandler):
+        print "initing model..."
         self.data = dataHandler
         self.model = svm.LinearSVC()
-        print "finished init"
     def train(self):
         print "train started"
         self.model.fit(self.data.trainFeatures, self.data.trainLabels)
